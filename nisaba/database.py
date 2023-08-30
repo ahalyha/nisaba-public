@@ -49,11 +49,10 @@ def ask_a_question(request):
 
     llm=OpenAI()
     qa_with_sources = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(), return_source_documents=True)
-    result = qa_with_sources({"query": request})
+    result = qa_with_sources({"query": "Give please very polite ansver to a question as you are a helpfull assistant"+request})
     return format_slack_message(result)
 
 def format_slack_message(response):
-    query = response['query']
     result = response['result']
     source_documents = response['source_documents']
 
@@ -69,8 +68,12 @@ def format_slack_message(response):
         ]
     }
 
+    link_count = 0
+
     for document in source_documents:
-        page_content = document.page_content
+        if link_count >= 2:  # Break loop if 2 links are added
+            break
+        
         metadata = document.metadata
 
         if 'loc' in metadata:
@@ -83,6 +86,7 @@ def format_slack_message(response):
                 }
             })
 
+            link_count += 1  # Increment the link count
     return message
 
 

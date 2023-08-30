@@ -37,7 +37,6 @@ def handle_mentions(body, say):
     say("Carefully searching... Wait a second")
 
     response = ask_a_question(text)
-    #response = send_to_openai(text)
     say(response)
 
 
