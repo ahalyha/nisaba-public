@@ -3,7 +3,6 @@ from slack_bolt.adapter.flask import SlackRequestHandler
 from slack_bolt import App
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, request
-from chat import send_to_openai
 from database import ask_a_question
 
 from dotenv import load_dotenv, find_dotenv

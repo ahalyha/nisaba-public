@@ -1,0 +1,60 @@
+*# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Jupyter Notebook temporary files
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# macOS specific files
+.DS_Store
+
+# Compiled files
+*.exe
+*.dll
+*.pyd
+*.pyo
+*.pyw
+*.pyz
+*.pxd
+*.pxi
+__pypy__/
+
+# Cache directories for various tools
+__pycache__/
+.cache/
+
+# Coverage output
+htmlcov/
+
+# Database files
+*.sqlite3
+*.db
+
+# Dependency directories
+lib/
+libs/
+lib64/
