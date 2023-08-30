@@ -1,0 +1,12 @@
+pinecone-client
+langchain
+torch
+python-dotenv
+transformers
+lxml
+bs4
+sentence_transformers
+bitsandbytes
+xformers
+accelerate
+einops
