@@ -71,9 +71,6 @@ def format_slack_message(response):
     link_count = 0
 
     for document in source_documents:
-        if link_count >= 2:  # Break loop if 2 links are added
-            break
-        
         metadata = document.metadata
 
         if 'loc' in metadata:

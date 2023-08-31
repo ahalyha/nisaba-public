@@ -18,7 +18,7 @@ loader = SitemapLoader(
 docs = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 500,
+    chunk_size = 450,
     chunk_overlap  = 100,
     length_function = len,
 )
